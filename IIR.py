@@ -35,6 +35,7 @@ class IIR:
         self.b2 = b2
 
     def run_filter(self,u0):
+        """Compute filter input u0 and return filter output y0"""
         self.u2 = self.u1
         self.u1 = self.u0
         self.u0 = u0        
