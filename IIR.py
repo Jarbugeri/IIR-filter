@@ -33,6 +33,15 @@ class IIR:
         self.a2 = a2
         self.b1 = b1
         self.b2 = b2
+        
+    def bypass_filter(self):
+        """Coeff for by pass filter config: y = u"""
+        self.a0 = 1.0
+        self.a1 = 0.0
+        self.a2 = 0.0
+        self.b0 = 1.0
+        self.b1 = 0.0
+        self.b2 = 0.0
 
     def run_filter(self,u0):
         """Compute filter input u0 and return filter output y0"""
