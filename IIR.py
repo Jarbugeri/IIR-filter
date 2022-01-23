@@ -43,8 +43,8 @@ class IIR:
         self.y1 = self.y0
         self.y0 = (self.a0 * self.u0 +
                    self.a1 * self.u1 +
-                   self.a2 * self.u2 +
-                   self.b1 * self.y1 +
+                   self.a2 * self.u2 -
+                   self.b1 * self.y1 -
                    self.b2 * self.y2 )
         return self.y0
 
